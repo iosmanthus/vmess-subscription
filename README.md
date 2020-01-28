@@ -10,4 +10,7 @@ go build
 # flag -subscribe follows a subscription link
 # flag -output follows a output file path
 ./vmess-subscription -inject config.json -subscribe https://subscription.com -output injected.json
+
+# if there are more api arguments, put them on the tail.
+./vmess-subscription -inject config.json -subscribe https://subscription.com -output injected.json class=gold area=hk
 ```
