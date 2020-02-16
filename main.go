@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"log"
 	"math/rand"
-	"os"
 	"time"
 
 	"github.com/iosmathus/vmess-subscription/subscribe"
@@ -91,7 +90,7 @@ func outputConfig(config *conf.Config) error {
 	if *outputFile == "" {
 		fmt.Println(string(data))
 	} else {
-		if err := ioutil.WriteFile(*outputFile, data, os.ModePerm); err != nil {
+		if err := ioutil.WriteFile(*outputFile, data, 0644); err != nil {
 			return nil
 		}
 	}
