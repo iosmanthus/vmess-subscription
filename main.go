@@ -91,7 +91,7 @@ func outputConfig(config *conf.Config) error {
 	if *outputFile == "" {
 		fmt.Println(string(data))
 	} else {
-		if err := ioutil.WriteFile(*outputFile, data, os.ModeAppend); err != nil {
+		if err := ioutil.WriteFile(*outputFile, data, os.ModePerm); err != nil {
 			return nil
 		}
 	}
